@@ -1,13 +1,38 @@
-function showsidebar(){
+window.addEventListener("load", () => {
+    const loader = document.querySelector("#loader-wrapper");
+    loader.classList.add("loader-hidden");
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('nav a[href^="#"], .responsive-nav a[href^="#"], #contact-button a');
+
+    for (const link of links) {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                hidebar(); 
+                
+                const navHeight = document.querySelector("nav").offsetHeight;
+                const targetPosition = targetElement.offsetTop - navHeight;
+
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: "smooth"
+                });
+            }
+        });
+    }
+});
+
+function showsidebar() {
     const sidebar = document.querySelector('.responsive-nav');
-    const buttonbar = document.querySelector('.responsive-menu-nav')
-    sidebar.style.display = 'flex';
-    buttonbar.style.display = 'none'
+    sidebar.classList.add('active');
 }
 
-function hidebar(){
-    const hidebar = document.querySelector('.responsive-nav')
-    const buttonshow = document.querySelector('.responsive-menu-nav')
-    hidebar.style.display = 'none'
-    buttonshow.style.display = 'flex'
+function hidebar() {
+    const sidebar = document.querySelector('.responsive-nav');
+    sidebar.classList.remove('active');
 }

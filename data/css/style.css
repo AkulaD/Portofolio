@@ -106,7 +106,7 @@ nav{
 
 /* about header */
 #about-header{
-    min-height: 100vh;
+    min-height: 80vh;
     background-color: var(--color-white);
     display: flex;
     flex-direction: row;
@@ -114,56 +114,67 @@ nav{
     align-items: center;
 }
 
-.left-about{
-    flex: 1;
+.content-about{
+    position: relative;
+    left :-20%;
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.left-about-body{
-    max-width: 600px;
-    margin: 0 auto;
+.title-header{
+    font-size: 0.8rem;
+    color: #ff1010;
+    padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
-.right-about{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.right-about-body{
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-.right-about-body p{
-    font-size: 1.3rem;
+.about-body h2{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
     color: var(--color-black);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.left-about-body h1{
-    font-size: 3rem;
+#name{
+    color: #ff1010;
+}
+
+#role{
+    padding-bottom: 1rem;
+    font-size: 1.2rem;
     color: var(--color-black);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-transform: uppercase;
 }
 
-.left-about-body h2{
-    font-size: 2rem;
-    color: var(--color-black);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.left-about-body p{
+.desc-about-body p{
     font-size: 1.2rem;
     color: var(--color-black);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+#contact-button{
+    padding-top: 1rem;
+}
+
+#contact-button a{
+    color: var(--color-white);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+#contact-button button{
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: var(--color-black);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#contact-button button:hover{
+    opacity: 0.8;
+}
 
 .wave-container {
     line-height: 0;
@@ -190,7 +201,15 @@ nav{
     font-size: 2.5rem;
     color: var(--color-black);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#about h2::after{
+    content: '';
+    display: block;
+    border-bottom: 0.5rem solid #ff1010;
+    width: 50px;
+    left: 0;
 }
 
 #about p{
@@ -262,9 +281,17 @@ nav{
 
 .experience h1{
     font-size: 2rem;
-    text-align: center;
+    padding-left: 10%;
     color: var(--color-black);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#experience h1::after {
+    content: '';
+    display: block;
+    border-bottom: 0.5rem solid #ff1010;
+    width: 50px;
+    left: 0;
 }
 
 .timeline-body img{
@@ -325,11 +352,18 @@ nav{
 
 /* education */
 #education h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-black);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    text-align: center;
-    margin-bottom: 20px;
+    padding-left: 10%;
+}
+
+#education h1::after {
+    content: '';
+    display: block;
+    border-bottom: 0.5rem solid #ff1010;
+    width: 50px;
+    left: 0;
 }
 
 .timeline-edu-center {
@@ -486,7 +520,7 @@ nav{
 
 /* contact */
 #contact h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--color-black);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -518,6 +552,11 @@ nav{
     gap: 20px;
 }
 
+.contact-body ul li img{
+    width: 60px;
+    transition: transform 0.3s ease;
+}
+
 
 /* footer */
 footer{
@@ -537,591 +576,184 @@ footer{
     padding: 20px 0;
 }
 
+.hidenav {
+    display: none;
+}
 
-@media (max-width: 460px) {
-    .container {
-        min-height: 50%;
-    }
-    
-    .right-nav ul {
-        display: none;
-    }
-
-    .contact-body ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+@media (max-width: 1024px) {
+    .content-about {
+        left: 0;
     }
 
-    .contact-body ul li img{
-        width: 50px;
-        gap: 10px;
-    }
-
-    #about-header{
-        min-height: 70vh;
-    }
-
-    .left-nav{
-        width: 40%;
-    }
-
-    .left-nav p{
-        font-size: 0.7rem;
-        margin-right: 0;
-    }
-
-    .right-about-body p{
-        font-size: 0.9rem
-    }
-
-    .left-about-body h1{
-        font-size: 1.4rem;
-    }
-
-    .left-about-body p{
-        font-size: 0.9rem;
-    }
-
-
-    .left-about-body h2{
-        font-size: 1.4rem;
-    }
-
-    .right-nav{
-        padding: 0px;
-        width: auto;
-    }
-
-    .right-about-body{
-        overflow: hidden;
-        padding: 0px;
-    }
-
-    #about h2{
-        font-size: 1.5rem;
-        margin: 1rem 3rem;
-    }
-
-    #about p{
-        font-size: 0.9rem;
-        padding: 0px 20px;
-        padding: 0 3rem;
-        margin-bottom: 1rem;
-    }
-
-    .skills {
-        padding: 0px;
-        margin: 0 30px;
-    }
-
-    .skills h2{
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-    }
-
-    .skills ul li{
-        font-size: 1rem;
-    }
-
-    .program-language ul{
-        gap: 15px;
-    }
-
-    .experience h1{
-        font-size: 1.8rem;
-    }
-
-    .timeline-body img{
-        width: 200px;
-    }
-
-    .timeline-body h2{
-        font-size: 1.3rem;
-    }
-
-    .timeline-body time{
-        font-size: 1rem;
-    }
-
-    .timeline-body p{
-        font-size: 1rem;
-    }
-
-    .timeline-body ul li{
-        font-size: 1rem;
-    }
-
-    #projects .body-project h1{
-        font-size: 1.8rem;
-    }
-
-    #projects .body-project h2{
-        font-size: 1.5rem;
-        padding: 300px 0px;
-    }
-
-    #education h1{
-        font-size: 1.8rem;
-    }
-
-    .timeline-edu h1{
-        font-size: 1.8rem;
-    }
-
-    .timeline-edu-item{
-        margin-bottom: 40px;
-    }
-
-    .timeline-edu-content img{
-        width: 150px;
-    }
-
-    .timeline-edu-content h2{
-        font-size: 1.3rem;
-    }
-
-    .timeline-edu-content time{
-        font-size: 1rem;
-    }
-
-    .timeline-edu-content p{
-        font-size: 1rem;
-    }
-
-    #unpam img{
-        width: 100px;
-    }
-
-    #unpam h2{
-        font-size: 1.3rem;
-    }
-
-    #unpam time{
-        font-size: 1rem;
-    }
-
-    #unpam p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    #smkn6 img{
-        width: 60px;
-    }
-
-    #smkn6 h2{
-        font-size: 1.3rem;
-    }
-
-    #smkn6 time{
-        font-size: 1rem;
-    }
-
-    #smkn6 p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    .extracirricular h3{
-        font-size: 1.2rem;
-    }
-
-    #smkn6 ul li{
-        font-size: 1rem;
-        margin: 0 10px;
-    }
-
-    #smpn15 img{
-        width: 60px;
-    }
-
-    #smpn15 h2{
-        font-size: 1.3rem;
-    }
-
-    #smpn15 time{
-        font-size: 1rem;
-    }
-
-    #smpn15 p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    #sd img{
-        width: 100px;
-    }
-
-    #sd h2{
-        font-size: 1.3rem;
-    }
-
-    #sd time{
-        font-size: 1rem;
-    }
-
-    #sd p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    #contact-container h1{
-        font-size: 1.8rem;
-    }
-
-    #contact-container p{
-        font-size: 1rem;
-        margin: 0px 10px;
-    }
-
-    .footer-container p{
-        font-size: 1rem;
+    .right-nav {
+        padding: 10px 20px;
     }
 }
 
-@media (min-width:460px) and (max-width: 768px) {
-    .container {
-        min-width: none;
-    }
-
-    .left-nav{
-        width: 40%;
-    }
-
-    .right-nav{
-        padding: 0px;
-        width: auto;
-        width: 60%;
+@media (max-width: 768px) {
+    .right-nav {
         display: none;
     }
 
-    .left-nav p{
-        font-size: 0.9rem;
-        margin-right: 5px;
+    .hidenav {
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
     }
 
-    .right-about-body{
-        padding: 0px;
+    .body-nav {
+        padding: 0 10px;
     }
 
-    .right-about-body p{
+    .left-nav p {
         font-size: 1rem;
     }
 
-    .left-about-body h1{
+    .left-nav img {
+        width: 40px;
+    }
+
+    .responsive-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--color-white);
+        z-index: 2000;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .responsive-nav.active {
+        right: 0;
+    }
+
+    .responsive-nav ul {
+        list-style: none;
+        padding: 80px 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .responsive-nav ul li a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        color: var(--color-black);
+        font-weight: bold;
+    }
+
+    #about-header {
+        flex-direction: column;
+        padding-top: 100px;
+    }
+
+    .content-about {
+        left: 0;
+        width: 100%;
+    }
+
+    .about-body h2 {
         font-size: 2rem;
     }
 
-    .left-about-body p{
-        font-size: 1rem;
+    .timeline-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 460px) {
+    .left-nav p {
+        font-size: 0.8rem;
     }
 
-    .left-about-body h2{
-        font-size: 1.5rem;
+    .left-nav b {
+        display: block;
     }
 
-    #about-header{
-        min-height: 70vh;
+    .about-body h2 {
+        font-size: 1.6rem;
     }
 
-    #about h2{
-        font-size: 1.8rem;
-        margin: 1rem 7rem;
+    #role {
+        font-size: 0.9rem;
+    }
+
+    .contact-body ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--secondary-color);
+    border-top: 5px solid #ff1010;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#screen-warning {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-white);
+    z-index: 10000;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.warning-content h2 {
+    color: #ff1010;
+    margin: 15px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.warning-content p {
+    font-family: 'Gill Sans', sans-serif;
+    color: var(--color-black);
+    line-height: 1.6;
+}
+
+@media (max-width: 349px) {
+    #screen-warning {
+        display: flex;
     }
     
-    #about p{
-        font-size: 1rem;
-        padding: 0px 20px;
-        padding: 0 7rem;
-        margin-bottom: 1rem;
-    }
-
-    .skills {
-        padding: 0px;
-        margin: 0 30px;
-    }
-
-    .skills h2{
-        font-size: 1.5rem;
-        margin-bottom: 5px;
-    }
-
-    .skills ul li{
-        font-size: 1rem;
-    }
-
-    .experience h1{
-        font-size: 1.8rem;
-    }
-
-    .timeline-body img{
-        width: 200px;
-    }
-
-    .timeline-body h2{
-        font-size: 1.3rem;
-    }
-
-    .timeline-body time{
-        font-size: 1rem;
-    }
-    .timeline-body p{
-        font-size: 1rem;
-    }
-
-    .timeline-body ul li{
-        font-size: 1rem;
-        margin: 0 1rem;
-    }
-
-    #projects .body-project h1{
-        font-size: 1.8rem;
-    }
-
-    #projects .body-project h2{
-        font-size: 1.5rem;
-        padding: 300px 0px;
-    }
-
-    #education h1{
-        font-size: 1.8rem;
-    }
-
-    .timeline-edu h1{
-        font-size: 1.8rem;
-    }
-
-    .timeline-edu-item{
-        margin-bottom: 40px;
-    }
-
-    .timeline-edu-content img{
-        width: 150px;
-    }
-
-    .timeline-edu-content h2{
-        font-size: 1.3rem;
-    }
-
-    .timeline-edu-content time{
-        font-size: 1rem;
-    }
-
-    .timeline-edu-content p{
-        font-size: 1rem;
-    }
-
-    #unpam img{
-        width: 100px;
-    }
-
-    #unpam h2{
-        font-size: 1.3rem;
-    }
-
-    #unpam time{
-        font-size: 1rem;
-    }
-
-    #unpam p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    #smkn6 img{
-        width: 60px;
-    }
-
-    #smkn6 h2{
-        font-size: 1.3rem;
-    }
-
-    #smkn6 time{
-        font-size: 1rem;
-    }
-
-    #smkn6 p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    .extracirricular h3{
-        font-size: 1.2rem;
-    }
-
-    #smkn6 ul li{
-        font-size: 1rem;
-        margin: 0 10px;
-    }
-
-    #smpn15 img{
-        width: 60px;
-    }
-
-    #smpn15 h2{
-        font-size: 1.3rem;
-    }
-
-    #smpn15 time{
-        font-size: 1rem;
-    }
-
-    #smpn15 p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    #sd img{
-        width: 100px;
-    }
-
-    #sd h2{
-        font-size: 1.3rem;
-    }
-
-    #sd time{
-        font-size: 1rem;
-    }
-
-    #sd p{
-        font-size: 1.1rem;
-        margin: 5px 0px;
-    }
-
-    #contact-container h1{
-        font-size: 1.8rem;
-    }
-
-    #contact-container p{
-        font-size: 1rem;
-        margin: 0px 10px;
-    }
-
-    .contact-body ul{
-        flex-direction: wrap;
-        align-items: center;
-    }
-
-    .contact-body ul li img{
-        width: 50px;
-        gap: 10px;
-    }
-
-    .footer-container p{
-        font-size: 1rem;
-    }
-
-    .line{
-        width: 100%;
-    }
-}
-
-@media (min-width: 690px) and (max-width: 1024px) {
-    .right-nav{
-        width: 60%;
-        padding: 0;
-        margin: 0 1rem;
-    }
-
-    .right-nav ul{
-        gap: 15px;
-    }
-}
-
-@media (max-width: 769px) {
-    .responsive-menu-nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 1rem 2rem;
-    }
-
-    .responsive-menu-nav img{
-        width: 3rem;
-        z-index: 10000;
-    }
-
-    .responsive-menu-nav button{
-        border: none;
-        background-color: transparent;
-    }
-
-    .responsive-nav{
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 100vh;
-        background-color: rgb(203, 203, 203);
-        display: none;
-        flex-direction: column;
-        align-items: center;
-        padding: 20px;
-        justify-content: flex-start;
-        z-index: 900;
-    }
-
-    .responsive-nav ul{
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-
-    .responsive-nav ul li a{
-        font-size: 1.5rem;
-        color: var(--color-black);
-        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .responsive-nav ul li a:hover{
-        color: var(--hover-color);
-        text-decoration: underline;
-        font-size: 1.8rem;
-        transition: color 0.3s ease, font-size 0.3s ease, font-weight 0.3s ease;
-    }
-
-    .responsive-nav button{
-        border: none;
-        background-color: transparent;
-    }
-
-    .responsive-nav img{
-        width: 3rem;
-        position: fixed;
-        top: 0;
-        right: 0;
-        margin: 1rem 3rem;
-    }
-}
-
-@media (min-width:769px){
-    .responsive-menu-nav{
-        display: none;
-    }
-
-    .responsive-nav{
-        display: none;
-    }
-
-    .hidenav{
-        display: none;
-    }
-}
-
-@media (max-width:395px){
-    .left-nav p{
-        display: none;
-    }
-}
-
-@media (min-width:768px) and (max-width:836px){
-    .contact-body img{
-        width: 50px;
+    header, main, footer, #loader-wrapper {
+        display: none !important;
     }
 }

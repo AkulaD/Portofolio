@@ -9,6 +9,18 @@
     <title>Portofolio</title>
 </head>
 <body>
+
+    <div id="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <div id="screen-warning">
+        <div class="warning-content">
+            <h2>Screen Too Small</h2>
+            <p>Sorry, this portfolio doesn't support resolutions below 350px. Please use a device with a larger screen or enable "Desktop Site" mode in your browser.</p>
+        </div>
+    </div>
+
     <header>
         <nav>
             <div class="body-nav">
@@ -20,7 +32,7 @@
                     <ul>
                         <li><a href="#about">About</a></li>
                         <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
+                        <!-- <li><a href="#projects">Projects</a></li> -->
                         <li><a href="#education">Education</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -35,7 +47,7 @@
                             <li><button onclick="hidebar()"><img src="./data/svg/close.svg" alt="hide"></button></li>
                             <li><a href="#about">About</a></li>
                             <li><a href="#experience">Experience</a></li>
-                            <li><a href="#projects">Projects</a></li>
+                            <!-- <li><a href="#projects">Projects</a></li> -->
                             <li><a href="#education">Education</a></li>
                             <li><a href="#contact">Contact</a></li>
                         </ul>
@@ -46,19 +58,20 @@
 
         <div class="container-header">
             <div class="container" id="about-header">
-            <div class="left-about">
-                <div class="left-about-body">
-                    <h1>Welcome to</h1>
-                    <h1>My Portfolio</h1>
-                    <h2>Shaka Banuasta</h2>
-                    <p>Web Developer | App Developer | Student</p>
-                </div>                
-            </div>
-            <div class="right-about">
-                <div class="right-about-body">
-                    <p>Explore my work, skills, and experiences.</p>
-                    <p>Feel free to reach out if you have any questions or opportunities!</p>
+            <div class="content-about">
+                <div class="about-body">
+                    <p class="title-header">Welcome to my Portofolio</p>
+                    <h2>Hello, Im College Student</h2>
+                    <h2 id="name">Shaka Banuasta</h2>
+                    <p id="role">Web Developer | Administrator | Finance | Student</p>
+                    <div class="desc-about-body">
+                        <p>Explore my work, skills, and experiences.</p>
+                        <p>Feel free to reach out if you have any questions or opportunities!</p>
+                    </div>
                 </div>
+                <div id="contact-button">
+                    <button><a href="#contact">Contact Me</a></button>
+                </div>          
             </div>
         </div>
         <div class="wave-container">
@@ -91,20 +104,12 @@
                     <div class="program-language">
                         <h2>Skills</h2>
                         <ul>
-                            <li>JavaScript</li>
-                            <li>Python</li>
-                            <li>PHP</li>
-                            <li>CSS</li>
-                            <li>HTML</li>
-                            <li>MySQL</li>
-                            <li>PostgreSQL</li>
-                            <li>React</li>
-                            <li>Laravel 11</li>
-                            <li>Bootstrap</li>
-                            <li>Microsoft Office 2021</li>
-                            <li>Ubuntu Server</li>
-                            <li>Ubuntu</li>
-                            <li>Debian</li>
+                            <li>Web Developer (Full Stack "PHP")</li>
+                            <li>Web Designer</li>
+                            <li>Server Administrator (Ubuntu Server & Debian)</li>
+                            <li>System Administrator (CPanel)</li>
+                            <li>Administrator (Office Support)</li>
+                            <li>Finance (Reporting, Bank Reconciliation, & Payment Processing)</li>
                         </ul>
                     </div>
                 </div>
@@ -182,32 +187,6 @@
                                             <li>Instructor in Netsia community (web dev & networking)</li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- SMPN15 -->
-                        <div class="timeline-edu-item">
-                            <div class="timeline-edu-dot"></div>
-                            <div class="timeline-edu-content">
-                                <div id="smpn15">
-                                    <img src="./data/img/logo-smpn15.png" alt="smpn15">
-                                    <h2>SMP Negeri 15 Tangerang Selatan</h2>
-                                    <time>2019-2022</time>
-                                    <p>Junior High School</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- SD -->
-                        <div class="timeline-edu-item">
-                            <div class="timeline-edu-dot"></div>
-                            <div class="timeline-edu-content">
-                                <div id="sd">
-                                    <img src="./data/img/logo-sd.png" alt="smpn15">
-                                    <h2>SDN Pondok Jagung Timur 02</h2>
-                                    <time>2013-2019</time>
-                                    <p>Elementary School</p>
                                 </div>
                             </div>
                         </div>
