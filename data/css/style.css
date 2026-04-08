@@ -66,12 +66,6 @@ nav{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.left-nav img{
-    border-radius:50%;
-    width: 50px;
-}
-
-
 .right-nav{
     align-items: center;
     padding: 10px 100px;
